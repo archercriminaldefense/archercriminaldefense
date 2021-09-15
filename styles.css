@@ -16,6 +16,8 @@ h1 {
 
 /* define grids */
 body {
+
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
@@ -29,6 +31,8 @@ body {
 }
 
 section {
+    overflow-x: hidden;
+
     display: grid;
     /* column-gap: 100em; */
     row-gap: 4vh;
@@ -72,7 +76,8 @@ section {
 
 #grid-row-three {
     grid-area: main;
-    overflow: auto;
+    /* overflow: auto; */
+    overflow-y: auto;
 
     /* background-color: #F6F6F8; */
     background-color: #e3e0cf;
