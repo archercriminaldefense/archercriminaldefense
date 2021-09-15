@@ -1,4 +1,14 @@
 /* global settings */
+:root {
+    --color-red: #B73225;
+    --color-blue: #004E7C;
+    /* --color-maroon: #591COB; */
+    --color-maroon: #800000;
+    --color-gray: #5C5F58;
+    --color-light-gray: #DCE1E3;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -53,19 +63,29 @@ section {
 #grid-row-one {
     grid-area: nav1;
     /* background-color: #F6F6F8; */
-    background-color: #c5d5cb;
+    /* background-color: #c5d5cb; */
+    /* background-color: var(--color-light-gray); */
+    background-color: white;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
    
     height: 4vh;
+
+    color: var(--color-maroon);
+}
+
+#grid-row-one > h1 {
+    color: var(--color-maroon);
 }
 
 #grid-row-two {
     grid-area: nav2;
     /* background-color: #E3E3E3; */
     background-color: #9fa8a3;
+
+    /* background-color: var(--color-gray); */
 
     display: flex;
     justify-content: space-around;
@@ -80,14 +100,15 @@ section {
     overflow-y: auto;
 
     /* background-color: #F6F6F8; */
-    background-color: #e3e0cf;
-
+    /* background-color: #e3e0cf; */
+    background-color: var(--color-light-gray);
 }
 
 #grid-row-last {
     grid-area: footer;
     /* background-color: #E3E3E3; */
-    background-color: #c5d5cb;
+    /* background-color: #c5d5cb; */
+    background-color: #9fa8a3;
 
     display: flex;
     justify-content: space-between;
@@ -136,6 +157,11 @@ section {
     padding: 10px;
     /* color: coral; */
 
+}
+
+.bullet-parent > h1 {
+    color: var(--color-maroon);
+    /* color: pink; */
 }
 
 ul > h1 {
