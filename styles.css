@@ -1,0 +1,190 @@
+/* global settings */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+/* define grids */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        'nav1'
+        'nav2'
+        'main'
+        'footer';
+
+    height: 100vh;
+}
+
+section {
+    display: grid;
+    /* grid-column-gap: 1cm; */
+    /* grid-row-gap: 1cm; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 1fr 10vh 1fr 10vh 1fr 10vh;
+    grid-template-areas:
+        'blank-spacer1'
+        'body-row-1'
+        'blank-spacer2'
+        'body-row-2'
+        'blank-spacer3'
+        'body-row-3'
+        'blank-spacer-4'
+        ;
+}
+
+/* define grid areas */
+
+/* main grid */
+#grid-row-one {
+    grid-area: nav1;
+    /* background-color: #F6F6F8; */
+    background-color: #c5d5cb;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    height: 4vh;
+}
+
+#grid-row-two {
+    grid-area: nav2;
+    /* background-color: #E3E3E3; */
+    background-color: #9fa8a3;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 4vh;
+}
+
+#grid-row-three {
+    grid-area: main;
+    overflow: auto;
+
+    /* background-color: #F6F6F8; */
+    background-color: #e3e0cf;
+
+}
+
+#grid-row-last {
+    grid-area: footer;
+    /* background-color: #E3E3E3; */
+    background-color: #c5d5cb;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 4vh;
+    /* height: 10%; */
+}
+
+/* body grid (not header or footer) */
+#body-row-1 {
+    grid-area: body-row-1;
+}
+
+#sub-body-row-1 {
+    width: 80%;
+    background-color: #c5d5cb;
+}
+
+#body-row-2 {
+    grid-area: body-row-2;
+}
+
+#body-row-3 {
+    grid-area: body-row-3;
+}
+
+/* multi use classes */
+.flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+   
+}
+
+
+/* Standard Tags */
+h1 {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+   
+}
+
+p {
+    font-size: 20px ;
+}
+
+/* Transitions */
+ul:hover {
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* grid spacers: try to remove */
+#blank-spacer1 {
+    grid-area: blank-spacer1;
+}
+
+#blank-spacer2 {
+    grid-area: blank-spacer2;
+}
+
+#blank-spacer3 {
+    grid-area: blank-spacer3;
+}
+
+#blank-spacer4 {
+    grid-area: blank-spacer4;
+}
+
+/*
+TODO
+
+set up a github in mom's email. then in that github
+create a legal defense repo
+invite rka.richard (richard.archer.123456? whatever my github is)
+push MY legal defense repo to that
+attach her url to the page  in aws
+share it with her
+
+replace this blank-spacer nonsense with grid properties like row gap lol
+
+turn the block of text bio into something with bullets that is legible
+
+need the first row to be a big wide picture with the firm name
+maybe look into grid to add column padding on the edges? for the 2nd grid, not the OG.
+similiarly, look into padding or margin to make the header and footer a little cleaner.
+
+all the body rows are flexbox, or can be -- can use that to orient my content. if it would help,
+could set the body rows to be a third grid rather than a flexbox for even more flavor
+
+factor out everything into variables
+think a little more about the color scheme
+
+add facebook and email buttons
+
+when you scroll up at the top, you see white. can that be fixed
+
+get internal page links working
+
+set up active links
+
+DEVELOP MOBILE VERSION AHHHHH
+*/
