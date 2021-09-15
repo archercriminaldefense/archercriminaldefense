@@ -22,9 +22,9 @@ body {
 section {
     display: grid;
     /* column-gap: 100em; */
-    row-gap: 5vh;
+    row-gap: 4vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 5vh 1fr 1fr 1fr 5vh;
+    grid-template-rows: .001vh 1fr 1fr 1fr .001vh;
     grid-template-areas:
         'blank-spacer-top'
         'body-row-1'
@@ -86,17 +86,91 @@ section {
 /* body grid (not header or footer) */
 #body-row-1 {
     grid-area: body-row-1;
+
+    display: grid;
+    grid-template-rows: 1fr 4fr 14fr 4fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr 9fr 1fr;
+
+    width: 100vw;
+    height: 80vh;
 }
 
-#sub-body-row-1 {
-    width: 80%;
-    background-color: #c5d5cb;
+#bio-pic {
+    /* grid-column-start: 2; */
+    /* grid-column-end: 4; */
+    grid-column: 2 / span 2;
+    /* grid-row-start: 2; */
+    /* grid-row-end: 5; */
+    grid-row: 2 / span 3;
+
+    /* background-color: red; */
+
+    background-image: url("images/pic6.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#bio-text {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+    background-color: white;
+}
+
+.bullet-parent {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    /* color: coral; */
+
+}
+
+ul > h1 {
+    font-size: 45px;
+}
+
+ul li::before {
+    /* https://www.geeksforgeeks.org/how-to-set-bullet-colors-in-html-lists-using-only-css/#:~:text=First%20of%20all%2C%20there%20is%20not%20direct%20way,comes%20before%20each%20list%20item%20of%20the%20list. */
+    /* Add Unicode of the bullet */
+    content: "\25AA";  
+      
+    /* Color of the content -- bullet here */
+    color: green; 
+      
+    /* Required to add space between 
+         the bullet and the text */
+    display: inline-block; 
+      
+    /* Required to add space between
+         the bullet and the text */
+    width: 1em; 
+      
+    /* Required to add space between the
+         bullet and the text */
+    margin-left: -0.9em; 
+
+    font-weight: bolder;
+    font-size: 1.4rem;
+ }
+
+.bullet {
+    color: black;
+    /* list-style: square; */
+    margin: 10px;
+    padding: 10px;
+    /* type: square; */
+    font-size: 25px;
+}
+
+#bio-texture {
+
 }
 
 #body-row-2 {
     grid-area: body-row-2;
 
-    background-image: url("images/pic1.jpg");
+    background-image: url('images/pic8.jpeg');
+    background-position: center center;
+    /* background-image: url("images/pic8.jpeg"); */
     background-repeat: no-repeat;
     background-size: 100%;
     opacity: .8;
@@ -105,9 +179,22 @@ section {
 
     color: white;
     font-weight: bold;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "text-here"
+        "blank1"
+        "blank2"
+    ;
 }
 
-#body-row-2 > h1 {
+#firm-overview-text {
+    grid-area: text-here;
+}
+
+#firm-overview-text > h1 {
     color: white;
     font-weight: bolder;
 }
@@ -116,8 +203,8 @@ section {
     grid-area: body-row-3;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
+    grid-template-rows: 5vw 1fr 1fr 1fr 5vw;
 
     height: 60vh;
     width: 100vw;
@@ -185,16 +272,17 @@ p {
 
 /* Transitions */
 ul:hover {
-    color: black;
-    font-weight: bold;
-    font-style: italic;
+    /* color: black; */
+    /* font-weight: bold; */
+    /* font-style: italic; */
+    /* border: 1px solid black; */
 }
 
 #blank-spacer-top {
     grid-area: blank-spacer-top;
 }
 
-#blank-spacer-top {
+#blank-spacer-bottom {
     grid-area: blank-spacer-bottom;
 }
 
@@ -211,6 +299,41 @@ ul:hover {
     background-color: #c5d5cb;
 }
 
+.logo-pure-css {
+	background: #4661b0; /* make it "Facebook blue" */
+	text-indent: -999em; /* Back the actual text in the paragraph tag out of the element */
+	width: 100px;/* Make it nice and big  */
+	height: 110px; /*The tag is 10px larger because of how we're handling the borders below
+    /* width: 100%;
+    height: 110%; */
+	border-radius: 3px; /* for that oh so important modern look */
+	position: relative; /* so we can position our other elements absolutely */
+	overflow: hidden; /* so we can hide any overflow those elements will have */
+	border: 15px solid #4661b0; /* so we can make it look like the F is not butting up against the right side of the box */
+	border-bottom: 0; /* removing the border here though, because the F does touch the bottom of the box */
+}
+
+.logo-pure-css:before {
+	content: "/20"; /* Psuedo elements need something for content, this means a blank space */
+	position: absolute; /* So we can position it exactly where we want it */
+	background: #4661b0; /* make the box the same Facebook blue */
+	width: 40px; /* setup the right width, which actually extends the box outside of the containing element (along with our positioning below) */
+	height: 90px; /* this also extends the trunk outside of the main box */
+	bottom: -30px; /* as mentioned above, we pull the box we're using to create the trunk of the F down to hide some of it, because it will have rounded corners on all sides */
+	right: -37px; /* similar to what we're doing with bottom above */
+	border: 20px solid white; /* make the remaining visible border white and thick enough to look right */
+	border-radius: 25px; /* now give the top right visible corner the necessary curve */
+}
+
+.logo-pure-css:after {
+	content: "/20"; /* again, pseudo elements need content to be visible */
+	position: absolute;  /* and we're going to want to position absolutely */
+	width: 55px;  /* the desired width of the box to make the bar long enough */
+	top: 50px;  /* set it in the proper location */
+	height: 20px;  /* make it thick enough */
+	background: white;  /* and the right color */
+	right: 5px;  /* then back it up from the edge of the containing block a bit */
+}
 
 /*
 TODO
