@@ -21,18 +21,16 @@ body {
 
 section {
     display: grid;
-    /* grid-column-gap: 1cm; */
-    /* grid-row-gap: 1cm; */
+    /* column-gap: 100em; */
+    row-gap: 5vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 10vh 1fr 10vh 1fr 10vh 1fr 10vh;
+    grid-template-rows: 5vh 1fr 1fr 1fr 5vh;
     grid-template-areas:
-        'blank-spacer1'
+        'blank-spacer-top'
         'body-row-1'
-        'blank-spacer2'
         'body-row-2'
-        'blank-spacer3'
         'body-row-3'
-        'blank-spacer-4'
+        'blank-spacer-bottom'
         ;
 }
 
@@ -81,7 +79,7 @@ section {
     justify-content: space-between;
     align-items: center;
 
-    height: 4vh;
+    height: 8vh;
     /* height: 10%; */
 }
 
@@ -137,37 +135,41 @@ ul:hover {
     font-style: italic;
 }
 
-/* grid spacers: try to remove */
-#blank-spacer1 {
-    grid-area: blank-spacer1;
+#blank-spacer-top {
+    grid-area: blank-spacer-top;
 }
 
-#blank-spacer2 {
-    grid-area: blank-spacer2;
+#blank-spacer-top {
+    grid-area: blank-spacer-bottom;
 }
 
-#blank-spacer3 {
-    grid-area: blank-spacer3;
+#fb-logo {
+    height: 7.8vh;
+    width: 7.8vh;
+    /* border: 1px black solid; */
+    background-color: #c5d5cb;
 }
 
-#blank-spacer4 {
-    grid-area: blank-spacer4;
+#fb-logo-img {
+    height: 100%;
+    width: 100%;
+    background-color: #c5d5cb;
 }
+
 
 /*
 TODO
 
-set up a github in mom's email. then in that github
-create a legal defense repo
-invite rka.richard (richard.archer.123456? whatever my github is)
-push MY legal defense repo to that
 attach her url to the page  in aws
 share it with her
 
-replace this blank-spacer nonsense with grid properties like row gap lol
+heights with min max so it doesn't shrink like it does 
+
+
 
 turn the block of text bio into something with bullets that is legible
 
+I think I need new BS columns around the edges 
 need the first row to be a big wide picture with the firm name
 maybe look into grid to add column padding on the edges? for the 2nd grid, not the OG.
 similiarly, look into padding or margin to make the header and footer a little cleaner.
