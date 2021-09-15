@@ -95,6 +95,21 @@ section {
 
 #body-row-2 {
     grid-area: body-row-2;
+
+    background-image: url("images/pic1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: .8;
+
+    height: 60vh;
+
+    color: white;
+    font-weight: bold;
+}
+
+#body-row-2 > h1 {
+    color: white;
+    font-weight: bolder;
 }
 
 #body-row-3 {
