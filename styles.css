@@ -241,7 +241,7 @@ ul li::before {
     grid-area: text-here;
 
     border: 5px red solid;
-    hieght: 100%;
+    height: 100%;
 }
 
 #firm-overview-text > h1 {
