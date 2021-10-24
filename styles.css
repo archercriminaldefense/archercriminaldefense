@@ -230,7 +230,7 @@ form {
     background-repeat: no-repeat;
     background-size: 100%;
 
-    z-index: 2;
+    z-index: 1;
 }
 
 #windmill-text {
@@ -240,7 +240,7 @@ form {
     /* background-color: white; */
     /* background-color: var(--color-footer); */
     background-color: #b9c0b0cb;
-    z-index: 1;
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
@@ -255,6 +255,22 @@ form {
     padding-left: 3vh;
 }
 
+.r10 {
+    padding-right: 3vh;
+}
+
+.l5 {
+    padding-left: 1vh;
+}
+
+.r5 {
+    padding-right: 1vh;
+}
+
 .t3 {
     padding-top: 1vh;
+}
+
+.black {
+    color: black;
 }
