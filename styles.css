@@ -303,3 +303,7 @@ form {
     border: 1px red solid;
     align: left;
 } */
+
+.bold {
+    font-weight: bold;
+}
