@@ -4,9 +4,13 @@
   }
   @media (max-width: 480px) {
     html { 
-        font-size: 2.5vw;
-        /* background-color: red important!;  */
+        font-size: 2.25vw;
+        /* background-color: red important!;  */        
     } 
+    #gavel-text {
+        /* grid-column: 3 / span 1; */
+        grid-column: 4 / span 3 !important;
+    }
  }
 
   /* @media (max-width: 900px) {
@@ -244,7 +248,7 @@ form {
     grid-row: 1 / span 1;
 
     /* background-color: #d7e1ec; */
-    background-color: rgba(211,211,211,0.8);
+    background-color: rgba(211,211,211,0.4);
     /* background-image: linear-gradient(360deg,#d7e1ec 74%, #ffffff 0% ); */
 }
 
