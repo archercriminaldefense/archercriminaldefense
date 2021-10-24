@@ -2,8 +2,10 @@
     /* font-size: 17px; */
     font-size: 1vw;
   }
-  @media (max-width: 900px) {
-    html { font-size: 4vw; } 
+  @media (max-width: 480px) {
+    html { 
+        font-size: 40vw; 
+    } 
  }
 
   /* @media (max-width: 900px) {
