@@ -4,7 +4,8 @@
   }
   @media (max-width: 480px) {
     html { 
-        font-size: 40vw; 
+        font-size: 4vw;
+        background-color: red important!; 
     } 
  }
 
@@ -297,3 +298,8 @@ form {
 .black {
     color: black;
 }
+
+/* #bullet {
+    border: 1px red solid;
+    align: left;
+} */
