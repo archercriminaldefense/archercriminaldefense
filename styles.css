@@ -107,6 +107,14 @@ footer {
     height: var(--footer-height);
 
     background-color: var(--color-footer);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+    /* justify-content: center; */
+
 }
 
 /* first grid defines header, nav, main, footer */
