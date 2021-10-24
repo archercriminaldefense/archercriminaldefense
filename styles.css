@@ -4,8 +4,8 @@
   }
   @media (max-width: 480px) {
     html { 
-        font-size: 4vw;
-        background-color: red important!; 
+        font-size: 2vw;
+        /* background-color: red important!;  */
     } 
  }
 
