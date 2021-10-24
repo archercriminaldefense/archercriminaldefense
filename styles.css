@@ -10,7 +10,7 @@
     #gavel-text {
         /* grid-column: 3 / span 1; */
         grid-column: 4 / span 3 !important;
-        background-color: rgba(211,211,211,0.7) !important;
+        background-color: rgba(211,211,211,0.9) !important;
     }
  }
 
